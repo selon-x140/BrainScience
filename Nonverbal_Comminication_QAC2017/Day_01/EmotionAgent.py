@@ -58,9 +58,13 @@ while(True):
             break
 
     # 推定された表情の種類を指定．
-    result = {i:k for i,(k,v) in enumerate(sorted(faces[0]['faceAttributes']['emotion'].items(), key=lambda x:x[1], reverse=True))}[0]
-    print(f'Your Reaction: {result}')
-    print(f'Computer Reaction: {emotion_dict[result]}')
+    if not face:
+        print("No detection")
+        pass
+    else:
+        result = {i:k for i,(k,v) in enumerate(sorted(faces[0]['faceAttributes']['emotion'].items(), key=lambda x:x[1], reverse=True))}[0]
+        print(f'Your Reaction: {result}')
+        print(f'Computer Reaction: {emotion_dict[result]}')
 
     if cv2.waitKey(WAIT_TIME) & 0xFF == ord('q'):
         break
