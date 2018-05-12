@@ -1,2 +1,4 @@
 # *KEY.env
 *.env
+.DS_Store
+*/.ipynb_checkpoints
