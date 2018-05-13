@@ -5,3 +5,7 @@
 
 # 実装環境
 Python 3.6.5
+
+# Day_03以降
+Aruduino or Raspberripy
+が必要になるので，購入し次第続きをやります．
